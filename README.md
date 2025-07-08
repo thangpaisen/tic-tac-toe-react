@@ -7,6 +7,7 @@ A modern, beautiful Tic Tac Toe game built with React.js, featuring a clean UI, 
 ## ✨ Features
 
 - 🎯 **Classic Tic Tac Toe gameplay** - Two players take turns placing X's and O's
+- 🤖 **AI opponent with difficulty levels** - Play against computer with Easy, Medium, or Hard difficulty
 - 🏆 **Win detection** - Automatically detects winning combinations and highlights them
 - 🤝 **Draw detection** - Recognizes when the game ends in a tie
 - 🔄 **Reset functionality** - Start a new game with the click of a button
@@ -44,11 +45,19 @@ npm start
 
 ## 🎮 How to Play
 
-1. **Start the game** - Player X goes first
-2. **Click on any square** to place your mark
-3. **Take turns** - Players alternate between X and O
-4. **Win the game** - Get three of your marks in a row (horizontally, vertically, or diagonally)
-5. **Reset anytime** - Click the "🔄 New Game" button to start over
+1. **Choose game mode** - Select between "Human vs Human" or "Human vs AI"
+2. **Select difficulty** (AI mode only) - Choose Easy, Medium, or Hard
+3. **Start the game** - Player X goes first (you play as X against AI)
+4. **Click on any square** to place your mark
+5. **Take turns** - Players alternate between X and O (or wait for AI response)
+6. **Win the game** - Get three of your marks in a row (horizontally, vertically, or diagonally)
+7. **Reset anytime** - Click the "🔄 New Game" button to start over
+
+### AI Difficulty Levels
+
+- **😊 Easy** - AI makes random moves, perfect for beginners
+- **😐 Medium** - AI uses basic strategy (tries to win, blocks opponent)
+- **😤 Hard** - AI uses minimax algorithm for optimal play, very challenging!
 
 ## 🏗️ Project Structure
 
@@ -62,6 +71,8 @@ tic-tac-toe-react/
 │   │   └── Square.js       # Individual square component
 │   ├── styles/
 │   │   └── App.css         # Application styles
+│   ├── utils/
+│   │   └── aiLogic.js      # AI algorithms for different difficulty levels
 │   ├── App.js              # Main application component
 │   └── index.js            # Application entry point
 ├── package.json            # Project dependencies and scripts
@@ -116,7 +127,7 @@ Contributions are welcome! Here's how you can help:
 ## 📋 Future Enhancements
 
 - [ ] Add game statistics tracking
-- [ ] Implement AI opponent with difficulty levels
+- [x] Implement AI opponent with difficulty levels
 - [ ] Add sound effects and music
 - [ ] Create tournament mode for multiple rounds
 - [ ] Add player name customization

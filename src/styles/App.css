@@ -38,6 +38,52 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.game-controls {
+  margin-bottom: 20px;
+}
+
+.game-mode,
+.difficulty {
+  margin-bottom: 15px;
+}
+
+.game-mode label,
+.difficulty label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.mode-button,
+.difficulty-button {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+  border: 2px solid #dee2e6;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.mode-button:hover,
+.difficulty-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mode-button.active,
+.difficulty-button.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
 .game-status {
   font-size: 1.5em;
   font-weight: bold;
@@ -152,6 +198,13 @@ h1 {
   
   h1 {
     font-size: 2em;
+  }
+  
+  .mode-button,
+  .difficulty-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+    margin: 2px;
   }
   
   .square {
